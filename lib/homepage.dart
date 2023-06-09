@@ -6,25 +6,33 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
-
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 135, 216, 216),
+  backgroundColor: const Color.fromARGB(255, 72, 60, 139),
       appBar: AppBar(
         title: const Center(child: Text("Portfolio")),
         backgroundColor: Colors.black,
       ),
-      body: const SingleChildScrollView(
-        padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
+      body: SingleChildScrollView(
+        padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
         child: Column(
           children: [
             IntrinsicWidth(
               child: Card(
-                color:   Color.fromARGB(255, 190, 231, 199),
                 elevation: 10,
-                child: Padding(
-                  padding:  EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
-                  child: Column(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+                child: Container(
+                  decoration: BoxDecoration(
+                    gradient: const LinearGradient(
+                      colors: [Colors.purple,Colors.black, Colors.blue],
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                    ),
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
+                  padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
+                  child: const Column(
                     children: [
                       CircleAvatar(
                         backgroundImage: AssetImage('img/shreeram.jpg'),
@@ -37,6 +45,7 @@ class HomePage extends StatelessWidget {
                         style: TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.bold,
+                          color:  Color.fromARGB(255, 255, 204, 204),
                         ),
                       ),
                       SizedBox(height: 8),
@@ -45,31 +54,43 @@ class HomePage extends StatelessWidget {
                         style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
+                          color: Color.fromARGB(255, 204, 204, 255),
                         ),
                       ),
                       SizedBox(height: 8),
                       Text(
-                        "I am Shreeram Poudel. I am currently studying BSc.CSIT. I am an intern at Thulo Technology Pvt Ltd.",
+                        "I am Shreeram Poudel. I am currently studying BSc.CSIT. I am an intern at Thulo Technology Pvt Ltd. I am currently learning Flutter and I want to become an expert in it.",
                         style: TextStyle(
                           fontSize: 16,
-                          fontWeight: FontWeight.normal,
+                          fontWeight: FontWeight.bold,
+                          fontStyle: FontStyle.italic,
+                          color: Color.fromARGB(255, 255, 204, 204),
                         ),
-                        textAlign: TextAlign.start
-                        ,
+                        textAlign: TextAlign.center,
                       ),
                     ],
                   ),
                 ),
               ),
             ),
-            SizedBox(height: 12),
+            const SizedBox(height: 12),
             IntrinsicWidth(
               child: Card(
-                color:   Color.fromARGB(255, 190, 231, 199),
                 elevation: 10,
-                child: Padding(
-                  padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 145.0),
-                  child: Column(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+                child: Container(
+                  decoration: BoxDecoration(
+                    gradient: const LinearGradient(
+                      colors: [Colors.purple, Colors.blue],
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                    ),
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
+                  padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 145.0),
+                  child: const Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Text(
@@ -77,22 +98,40 @@ class HomePage extends StatelessWidget {
                         style: TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.bold,
+                          color:  Color.fromARGB(255, 255, 204, 204),
                         ),
                       ),
                       SizedBox(height: 12),
-                      Text("Coming Soon!"),
+                      Text(
+                        "Coming Soon!",
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.bold,
+                          color: Color.fromARGB(255, 204, 204, 255),
+                        ),
+                      ),
                     ],
                   ),
                 ),
               ),
             ),
-            SizedBox(height: 12),
+            const SizedBox(height: 12),
             Card(
-              color:   Color.fromARGB(255, 190, 231, 199),
               elevation: 10,
-              child: Padding(
-                padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 117.0),
-                child: Column(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10.0),
+              ),
+              child: Container(
+                decoration: BoxDecoration(
+                  gradient: const LinearGradient(
+                   colors: [Colors.purple, Colors.blue],
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                  ),
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+                padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 105.0),
+                child: const Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Text(
@@ -100,21 +139,39 @@ class HomePage extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.bold,
+                        color: Color.fromARGB(255, 255, 204, 204),
                       ),
                     ),
                     SizedBox(height: 12),
-                    Text("Dart,Flutter,HTML,CSS,QA"),
+                    Text(
+                      "Dart, Flutter, HTML, CSS, QA",
+                      style: TextStyle(
+                        fontSize: 14,
+                        fontWeight: FontWeight.bold,
+                        color: Color.fromARGB(255, 204, 204, 255),
+                      ),
+                    ),
                   ],
                 ),
               ),
             ),
-            SizedBox(height: 12),
+            const SizedBox(height: 12),
             Card(
-              color:   Color.fromARGB(255, 190, 231, 199),
               elevation: 10,
-              child: Padding(
-                padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 127.0),
-                child: Column(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10.0),
+              ),
+              child: Container(
+                decoration: BoxDecoration(
+                  gradient: const LinearGradient(
+                  colors: [Colors.purple, Colors.blue],
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                  ),
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+                padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 127.0),
+                child: const Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Text(
@@ -122,22 +179,40 @@ class HomePage extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.bold,
+                        color: Color.fromARGB(255, 255, 204, 204),
                       ),
                     ),
                     SizedBox(height: 12),
-                    Text("BSC.CSIT -> 8th sem"),
+                    Text(
+                      "BSC.CSIT -> 8th sem",
+                      style: TextStyle(
+                        fontSize: 14,
+                        fontWeight: FontWeight.bold,
+                        color: Color.fromARGB(255, 204, 204, 255),
+                      ),
+                    ),
                   ],
                 ),
               ),
             ),
-            SizedBox(height: 12),
+            const SizedBox(height: 12),
             IntrinsicWidth(
               child: Card(
-                color:   Color.fromARGB(255, 190, 231, 199),
                 elevation: 10,
-                child: Padding(
-                  padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 100.0),
-                  child: Column(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+                child: Container(
+                  decoration: BoxDecoration(
+                    gradient: const LinearGradient(
+                    colors: [Colors.purple, Colors.blue],
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                    ),
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
+                  padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 100.0),
+                  child: const Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Text(
@@ -145,22 +220,42 @@ class HomePage extends StatelessWidget {
                         style: TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.bold,
+                          color: Color.fromARGB(255, 255, 204, 204)
                         ),
                       ),
                       SizedBox(height: 12),
-                      Center(child: Text("QA training - Deerwalk Training")),
+                      Center(
+                        child: Text(
+                          "QA training - Deerwalk Training",
+                          style: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.bold,
+                            color: Color.fromARGB(255, 204, 204, 255),
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                 ),
               ),
             ),
-            SizedBox(height: 12),
+            const SizedBox(height: 12),
             Card(
-              color:   Color.fromARGB(255, 190, 231, 199),
               elevation: 10,
-              child: Padding(
-                padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 100.0),
-                child: Column(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10.0),
+              ),
+              child: Container(
+                decoration: BoxDecoration(
+                  gradient: const LinearGradient(
+                      colors: [Colors.purple, Colors.blue],
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                  ),
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+                padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 100.0),
+                child: const Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Text(
@@ -168,13 +263,34 @@ class HomePage extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.bold,
-                        
+                        color: Color.fromARGB(255, 255, 204, 204),
                       ),
                     ),
                     SizedBox(height: 12),
-                    Text("Phone no: 9846751826"),
-                    Text("Email: ccrpoudelalt@gmail.com"),
-                    Text("Address: Newroad, Pokhara"),
+                    Text(
+                      "Phone no: 9846751826",
+                      style: TextStyle(
+                        fontSize: 14,
+                        fontWeight: FontWeight.bold,
+                        color:Color.fromARGB(255, 204, 204, 255),
+                      ),
+                    ),
+                    Text(
+                      "Email: ccrpoudelalt@gmail.com",
+                      style: TextStyle(
+                        fontSize: 14,
+                        fontWeight: FontWeight.bold,
+                        color:Color.fromARGB(255, 204, 204, 255),
+                      ),
+                    ),
+                    Text(
+                      "Address: Newroad, Pokhara",
+                      style: TextStyle(
+                        fontSize: 14,
+                        fontWeight: FontWeight.bold,
+                        color:Color.fromARGB(255, 204, 204, 255)
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -184,9 +300,16 @@ class HomePage extends StatelessWidget {
       ),
       endDrawer: Drawer(
         child: Container(
-          color: const Color.fromARGB(255, 135, 216, 216),
+          decoration: BoxDecoration(
+                    gradient: const LinearGradient(
+                      colors: [Colors.purple, Colors.blue,Colors.red,],
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                    ),
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
           child: Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.fromLTRB(8.0, 50.0, 8.0, 8.0),
             child: Column(
               children: [
                 const CircleAvatar(
@@ -198,12 +321,15 @@ class HomePage extends StatelessWidget {
                 const SizedBox(
                   height: 7,
                 ),
-                const Text(
-                  "Shreeram Poudel",
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 24,
-                    color: Color.fromARGB(255, 45, 54, 102),
+                const Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Text(
+                    "Shreeram Poudel",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 24,
+                      color: Color.fromARGB(255, 255, 204, 204),
+                    ),
                   ),
                 ),
                 const Divider(
@@ -221,14 +347,14 @@ class HomePage extends StatelessWidget {
                           ListTile(
                             leading: Icon(
                               drawerList[index].icon,
-                              color: Colors.black,
+                              color: const Color.fromARGB(255, 255, 255, 255),
                             ),
                             title: Text(
                               drawerList[index].title,
                               style: const TextStyle(
                                 fontSize: 18,
                                 fontWeight: FontWeight.bold,
-                                color: Color.fromARGB(255, 45, 54, 102),
+                                color:  Color.fromARGB(255, 255, 204, 204),
                               ),
                             ),
                           ),
@@ -246,13 +372,14 @@ class HomePage extends StatelessWidget {
                 const ListTile(
                   leading: Icon(
                     Icons.logout,
-                    color: Colors.black,
+                    color:  Color.fromARGB(255, 255, 255, 255),
                   ),
                   title: Text(
                     "Log out",
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
+                      color: Color.fromARGB(255, 255, 204, 204),
                     ),
                   ),
                 ),
@@ -264,3 +391,4 @@ class HomePage extends StatelessWidget {
     );
   }
 }
+
