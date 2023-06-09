@@ -6,7 +6,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final screenWidth = MediaQuery.of(context).size.width;
+
 
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 135, 216, 216),
@@ -14,14 +14,16 @@ class HomePage extends StatelessWidget {
         title: const Center(child: Text("Portfolio")),
         backgroundColor: Colors.black,
       ),
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.all(16),
+      body: const SingleChildScrollView(
+        padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
         child: Column(
           children: [
-            const IntrinsicWidth(
+            IntrinsicWidth(
               child: Card(
+                color:   Color.fromARGB(255, 190, 231, 199),
+                elevation: 10,
                 child: Padding(
-                  padding: EdgeInsets.all(16.0),
+                  padding:  EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
                   child: Column(
                     children: [
                       CircleAvatar(
@@ -52,20 +54,23 @@ class HomePage extends StatelessWidget {
                           fontSize: 16,
                           fontWeight: FontWeight.normal,
                         ),
-                        textAlign: TextAlign.center,
+                        textAlign: TextAlign.start
+                        ,
                       ),
                     ],
                   ),
                 ),
               ),
             ),
-            const SizedBox(height: 24),
+            SizedBox(height: 12),
             IntrinsicWidth(
               child: Card(
+                color:   Color.fromARGB(255, 190, 231, 199),
+                elevation: 10,
                 child: Padding(
-                  padding:EdgeInsets.fromLTRB(100, 16, 100, 16),
-                  child: const Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                  padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 145.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Text(
                         'Projects',
@@ -81,64 +86,59 @@ class HomePage extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(height: 24),
+            SizedBox(height: 12),
+            Card(
+              color:   Color.fromARGB(255, 190, 231, 199),
+              elevation: 10,
+              child: Padding(
+                padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 117.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Text(
+                      'Skills',
+                      style: TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    SizedBox(height: 12),
+                    Text("Dart,Flutter,HTML,CSS,QA"),
+                  ],
+                ),
+              ),
+            ),
+            SizedBox(height: 12),
+            Card(
+              color:   Color.fromARGB(255, 190, 231, 199),
+              elevation: 10,
+              child: Padding(
+                padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 127.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Text(
+                      'Education',
+                      style: TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    SizedBox(height: 12),
+                    Text("BSC.CSIT -> 8th sem"),
+                  ],
+                ),
+              ),
+            ),
+            SizedBox(height: 12),
             IntrinsicWidth(
               child: Card(
+                color:   Color.fromARGB(255, 190, 231, 199),
+                elevation: 10,
                 child: Padding(
-                  padding: EdgeInsets.symmetric(
-                    horizontal: screenWidth * 0.2,
-                    vertical: 16.0,
-                  ),
-                  child: const Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Skills',
-                        style: TextStyle(
-                          fontSize: 24,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      SizedBox(height: 12),
-                      Text("Dart"),
-                      Text("Flutter"),
-                      Text("HTML"),
-                      Text("CSS"),
-                      Text("QA"),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-            const SizedBox(height: 24),
-            const IntrinsicWidth(
-              child: Card(
-                child: Padding(
-                  padding: EdgeInsets.all(16.0),
+                  padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 100.0),
                   child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Education',
-                        style: TextStyle(
-                          fontSize: 24,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      SizedBox(height: 12),
-                      Text("BSC.CSIT -> 8th sem"),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-            const SizedBox(height: 24),
-            const IntrinsicWidth(
-              child: Card(
-                child: Padding(
-                  padding: EdgeInsets.all(16.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Text(
                         'Trainings',
@@ -148,33 +148,34 @@ class HomePage extends StatelessWidget {
                         ),
                       ),
                       SizedBox(height: 12),
-                      Text("QA training - Deerwalk Training"),
+                      Center(child: Text("QA training - Deerwalk Training")),
                     ],
                   ),
                 ),
               ),
             ),
-            const SizedBox(height: 24),
-            const IntrinsicWidth(
-              child: Card(
-                child: Padding(
-                  padding: EdgeInsets.all(16.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Contact',
-                        style: TextStyle(
-                          fontSize: 24,
-                          fontWeight: FontWeight.bold,
-                        ),
+            SizedBox(height: 12),
+            Card(
+              color:   Color.fromARGB(255, 190, 231, 199),
+              elevation: 10,
+              child: Padding(
+                padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 100.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Text(
+                      'Contact',
+                      style: TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
+                        
                       ),
-                      SizedBox(height: 12),
-                      Text("Phone no: 9846751826"),
-                      Text("Email: ccrpoudelalt@gmail.com"),
-                      Text("Address: Newroad, Pokhara"),
-                    ],
-                  ),
+                    ),
+                    SizedBox(height: 12),
+                    Text("Phone no: 9846751826"),
+                    Text("Email: ccrpoudelalt@gmail.com"),
+                    Text("Address: Newroad, Pokhara"),
+                  ],
                 ),
               ),
             ),
